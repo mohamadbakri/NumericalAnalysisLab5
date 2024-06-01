@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>واجهة المحاضر</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html">صفحة المحاضر</a>
+      <a href="student.html">صفحة الطالب</a>
+      <a id="clearStorageButton" class="button" onclick="clearStorage()"
+        >مسح التخزين
+      </a>
+    </div>
+    <div class="container">
+      <h1>إعداد الامتحان</h1>
+      <form id="examSetupForm">
+        <label for="courseName">اسم المقرر:</label>
+        <input type="text" id="courseName" required /><br /><br />
+
+        <label for="courseCode">كود المقرر:</label>
+        <input type="text" id="courseCode" required /><br /><br />
+
+        <label for="numTFQuestions">عدد الأسئلة (صح/خطأ):</label>
+        <input type="number" id="numTFQuestions" required /><br /><br />
+
+        <label for="numMCQQuestions">عدد الأسئلة (اختيار من متعدد):</label>
+        <input type="number" id="numMCQQuestions" required /><br /><br />
+
+        <label for="examDuration">مدة الامتحان (بالدقائق):</label>
+        <input type="number" id="examDuration" required /><br /><br />
+
+        <button type="button" onclick="generateQuestions()">
+          توليد الأسئلة
+        </button>
+      </form>
+      <div id="questionsContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="xlsx.full.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script> -->
+  </body>
+</html>

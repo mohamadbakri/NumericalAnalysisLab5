@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>واجهة الطالب</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html">صفحة المحاضر</a>
+      <a href="student.html">صفحة الطالب</a>
+      <a id="clearStorageButton" class="button" onclick="clearStorage()"
+        >مسح التخزين
+      </a>
+    </div>
+    <div class="container">
+      <h1>الامتحان الإلكتروني</h1>
+      <form id="studentForm">
+        <label for="studentName">الاسم:</label>
+        <input type="text" id="studentName" required /><br /><br />
+
+        <label for="studentID">الرقم الأكاديمي:</label>
+        <input type="text" id="studentID" required /><br /><br />
+
+        <button type="button" onclick="startExam()">بدء الامتحان</button>
+      </form>
+      <div id="examContainer" style="display: none"></div>
+      <div id="timer"></div>
+      <button onclick="exportToExcel()">تصدير النتائج إلى Excel</button>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script> -->
+    <script src="xlsx.full.min.js"></script>
+  </body>
+</html>

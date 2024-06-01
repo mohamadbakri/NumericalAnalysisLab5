@@ -1,1 +1,3 @@
-# NumericalAnalysisLab5
+# -NumericalAnalysisLab5
+
+5-يقوم التطبيق بأخراج ملف إكسل بأسماء الطالب وأرقامهم األكاديمية ودرجانهم
